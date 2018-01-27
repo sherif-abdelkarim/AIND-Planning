@@ -37,7 +37,7 @@ class HaveCakeProblem(Problem):
                              [effect_add, effect_rem])
         return [eat_action, bake_action]
 
-    def actions(self, state: str) -> list:  # of Action
+    def actions(self, state: str):  # of Action
         possible_actions = []
         kb = PropKB()
         kb.tell(decode_state(state, self.state_map).pos_sentence())
